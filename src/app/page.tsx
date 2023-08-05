@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="flex h-[50vh] flex-col items-center justify-center">
+      <div className="container flex h-[50vh] flex-col items-center justify-center">
         <Image
           src={apollologo}
           alt="Apollo Logo"
@@ -15,7 +15,7 @@ export default function Home() {
           className="rounded-[23.3%]"
         />
 
-        <h1 className="text-2xl font-semibold mt-8">
+        <h1 className="mt-8 text-2xl font-semibold">
           Apollo SPCA 2020 Community Photo Album
         </h1>
         <h2>
