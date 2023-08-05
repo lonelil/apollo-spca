@@ -13,6 +13,7 @@ export default function Home() {
           width={250}
           height={250}
           className="rounded-[23.3%]"
+          quality={100}
         />
 
         <h1 className="mt-8 text-2xl font-semibold">
@@ -33,6 +34,7 @@ export default function Home() {
               width={image.width}
               height={image.height}
               className="mb-4 aspect-auto w-full rounded-md"
+              quality={100}
             />
           );
         })}
