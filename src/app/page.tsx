@@ -26,9 +26,12 @@ export default function Home() {
       </div>
       <div className="container columns-3xs">
         {data.map((image, i) => {
+          let str = image.src.split(".");
+          str[3] = "webp";
+          str = str.join(".");
           return (
             <Image
-              src={image.src}
+              src={src}
               alt={image.name}
               key={i}
               width={image.width}
