@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -19,8 +20,28 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/lonelil/fonts@latest/fonts/sf-pro/use.min.css"
         />
+        {[
+          "cdn.jsdelivr.com",
+          "i.imgur.com",
+          "wink.lonelil.com",
+        ].map((preconnect, i: number) => {
+          return (
+            <link
+              key={i}
+              rel="preconnect"
+              href={"https://" + preconnect}
+              crossOrigin="anonymous"
+            />
+          );
+        })}
       </head>
       <body className={"dark antialiased"}>{children}</body>
+      <Script
+        src="https://wink.lonelil.com/js/script.js"
+        strategy="lazyOnload"
+        data-domain="apollo-spca.lonelil.com"
+        id="wink"
+      />
     </html>
   );
 }
